@@ -35,6 +35,7 @@ const HomeScreen = ({ navigation }) => {
             {/* List of Rockets */}
             <View>
                 <FlatList
+                    showsVerticalScrollIndicator={false}
                     data={rockets}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (

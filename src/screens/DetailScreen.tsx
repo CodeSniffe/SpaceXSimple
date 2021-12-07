@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     text: {
         color: COLORS.oxfordBlue
     },
-    infoWrapper: {
+    infoWrapper: {},
+    textWrapper: {
         paddingHorizontal: 15,
     },
     name: {
