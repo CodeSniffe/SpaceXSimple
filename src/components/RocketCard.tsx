@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     bottomTextWrapper: {
         flexDirection: 'row',
         alignItems: 'center',
+        paddingTop:5
     },
     text: {
         color: COLORS.platinum,

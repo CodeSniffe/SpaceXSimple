@@ -15,17 +15,12 @@ const HomeScreen = ({ navigation }) => {
 
     })
 
-    const handleNavigation = item => {
-        setSelectedRocket(item)
-        navigation.navigate('Details')
-    }
-
     return (
         <View style={styles.container}>
             <StatusBar
                 barStyle="light-content"
                 hidden={false}
-                backgroundColor={COLORS.black}
+                backgroundColor={COLORS.oxfordBlue}
             />
             {/* Header */}
             <View style={styles.header}>

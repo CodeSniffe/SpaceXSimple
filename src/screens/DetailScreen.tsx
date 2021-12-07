@@ -23,19 +23,19 @@ const DetailScreen = ({ navigation, route }) => {
                 <View style={styles.textWrapper}>
                     <Text style={styles.name}>{item.name}</Text>
 
-                    <Text>Company</Text>
+                    <Text style={styles.label}>Company</Text>
                     <Text style={styles.text}>{item.company}</Text>
 
-                    <Text>Country</Text>
+                    <Text style={styles.label}>Country</Text>
                     <Text style={styles.text}>{item.country}</Text>
 
-                    <Text>Cost per Launch</Text>
-                    <Text style={styles.text}>$ {item.cost_per_launch.toLocaleString("en-US", { style: "currency", currency: "USD" })}</Text>
+                    <Text style={styles.label}>Cost per Launch</Text>
+                    <Text style={styles.text}>$ {Number(item.cost_per_launch).toLocaleString("en-US", { style: "currency", currency: "USD" })}</Text>
 
-                    <Text>Launch Success Rate</Text>
+                    <Text style={styles.label}>Launch Success Rate</Text>
                     <Text style={styles.text}>{item.success_rate_pct}%</Text>
 
-                    <Text>Description</Text>
+                    <Text style={styles.label}>Description</Text>
                     <Text style={styles.text}>{item.description}</Text>
                 </View>
             </View>
@@ -63,10 +63,15 @@ const styles = StyleSheet.create({
     },
     image: {
         height: '50%',
-        width: '100%'
+        width: '100%',
+    },
+    label:{
+        color:COLORS.orangeWeb,
     },
     text: {
-        color: COLORS.oxfordBlue
+        color: COLORS.oxfordBlue,
+        fontWeight:'bold',
+        paddingVertical:3,
     },
     infoWrapper: {},
     textWrapper: {
