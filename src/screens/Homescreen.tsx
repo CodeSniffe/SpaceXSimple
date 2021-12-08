@@ -30,7 +30,9 @@ const HomeScreen = ({ navigation }) => {
             {/* List of Rockets */}
             <View>
                 <FlatList
-                    showsVerticalScrollIndicator={false}
+                    showsHorizontalScrollIndicator={false}
+                    // showsVerticalScrollIndicator={false}
+                    horizontal
                     data={rockets}
                     keyExtractor={item => item.id}
                     renderItem={({ item }) => (

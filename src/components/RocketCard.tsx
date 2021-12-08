@@ -13,10 +13,7 @@ const RocketCard = ({ name, company, country, onPress }) => {
                 />
                 <View style={styles.textWrapper}>
                     <Text style={styles.name}>{name}</Text>
-                    <View style={styles.bottomTextWrapper}>
-                        <Text style={styles.text}>{company}, {country}</Text>
-                        <Text style={styles.text}></Text>
-                    </View>
+                    <Text numberOfLines={1} style={styles.text}>{company}, {country}</Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -28,34 +25,30 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 16,
         shadowOpacity: 0.2,
-        shadowRadius: 4,
+        shadowRadius: 3,
         shadowColor: 'black',
         shadowOffset: {
             height: 0,
             width: 0,
         },
         elevation: 1,
-        marginVertical: 15,
+        marginTop: 15,
         margin: 10,
+        width: Dimensions.get('screen').width * 0.8,
     },
     image: {
-        height: 250,
+        height: '90%',
         borderTopLeftRadius: 16,
         borderTopRightRadius: 16,
         width: '100%',
-        resizeMode:'cover'
     },
     textWrapper: {
-        padding: 16,
-        backgroundColor:COLORS.oxfordBlue,
-        borderBottomRightRadius:16,
-        borderBottomLeftRadius:16,
-
-    },
-    bottomTextWrapper: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        paddingTop:5
+        flex:1,
+        padding:15,
+        backgroundColor: COLORS.oxfordBlue,
+        borderBottomRightRadius: 16,
+        borderBottomLeftRadius: 16,
+        justifyContent: 'center',
     },
     text: {
         color: COLORS.platinum,
