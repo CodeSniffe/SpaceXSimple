@@ -1,4 +1,4 @@
-export default COLORS = {
+const COLORS = {
     black: '#000000',
     oxfordBlue: '#14213D',
     orangeWeb: '#FCA311',
@@ -6,3 +6,5 @@ export default COLORS = {
     platinum: '#E5E5E6',
     white: '#FFFFFF',
 }
+
+export default COLORS;

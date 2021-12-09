@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, FlatList, StyleSheet, Button, Image, StatusBar } from "react-native";
+import { View, Text, FlatList, StyleSheet, Button, Image, StatusBar,Alert} from "react-native";
 import COLORS from "../assets/COLORS";
 import RocketCard from "../components/RocketCard";
 import { Dummydata } from './../assets/DummyData';
@@ -12,7 +12,9 @@ const HomeScreen = ({ navigation }) => {
     const [selectedRocket, setSelectedRocket] = useState(null);
 
     useEffect(() => {
-
+        Alert.alert(
+            "One Time Pop Up Message","HomeScreen"
+        )
     })
 
     return (
