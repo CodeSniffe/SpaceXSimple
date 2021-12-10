@@ -39,6 +39,8 @@ const DetailScreen = ({ navigation, route }) => {
 
                         <Text style={styles.label}>Cost per Launch</Text>
                         <Text style={styles.text}>$ {item.cost_per_launch.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</Text>
+
+                    <Text style={styles.text}>Success Rate: {item.success_rate_pct}%</Text>
                     </View>
 
                     {/* Specfication */}
