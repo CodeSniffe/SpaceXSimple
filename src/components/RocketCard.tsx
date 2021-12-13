@@ -2,14 +2,17 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from "react-native";
 
 import COLORS from './../assets/COLORS';
+import images from './../assets/CONSTANTS';
 
-const RocketCard = ({ name, company, country, onPress }) => {
+const RocketCard = ({ id,name, company, country, onPress }) => {
+
     return (
         <TouchableOpacity onPress={onPress}>
             <View style={styles.card}>
                 <Image
-                    source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/SpX_CRS-2_launch_-_further_-_cropped.jpg/800px-SpX_CRS-2_launch_-_further_-_cropped.jpg" }}
+                    // source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/SpX_CRS-2_launch_-_further_-_cropped.jpg/800px-SpX_CRS-2_launch_-_further_-_cropped.jpg" }}
                     style={styles.image}
+                    source={images.Falcon_Heavy}
                 />
                 <View style={styles.textWrapper}>
                     <Text style={styles.name}>{name}</Text>
@@ -43,8 +46,8 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     textWrapper: {
-        flex:1,
-        padding:15,
+        flex: 1,
+        padding: 15,
         backgroundColor: COLORS.oxfordBlue,
         borderBottomRightRadius: 16,
         borderBottomLeftRadius: 16,

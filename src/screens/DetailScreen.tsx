@@ -7,8 +7,6 @@ import COLORS from "../assets/COLORS";
 const DetailScreen = ({ navigation, route }) => {
 
     const item = route.params.value;
-    console.log(item)
-    console.log(item.payload_weights)
 
     return (
 
