@@ -11,12 +11,12 @@ const StackNavigator = () => {
 
     return (
         <Stack.Navigator
-            intialRouteName="Home"
+            intialRouteName="Rockets"
             screenOptions={{
                 headerShown: false,
             }}
         >
-            <Stack.Screen name="Home" component={HomeScreen} />
+            <Stack.Screen name="Rockets" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailScreen} />
             <Stack.Screen name="Wiki" component={WikiScreen} />
         </Stack.Navigator>

@@ -4,30 +4,31 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, Dimensions } from "rea
 import COLORS from './../assets/COLORS';
 import images from './../assets/CONSTANTS';
 
-const RocketCard = ({ id,name, company, country, onPress }) => {
+const RocketCard = ({ id, name, company, country, onPress }) => {
 
     return (
-        <TouchableOpacity onPress={onPress}>
-            <View style={styles.card}>
-                <Image
-                    // source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/SpX_CRS-2_launch_-_further_-_cropped.jpg/800px-SpX_CRS-2_launch_-_further_-_cropped.jpg" }}
-                    style={styles.image}
-                    source={images.Falcon_Heavy}
-                />
-                <View style={styles.textWrapper}>
-                    <Text style={styles.name}>{name}</Text>
-                    <Text numberOfLines={1} style={styles.text}>{company}, {country}</Text>
+        <View>
+            <TouchableOpacity onPress={onPress}>
+                <View style={styles.card}>
+                    <Image
+                        style={styles.image}
+                        source={images.falcon1}
+                    />
+                    <View style={styles.textWrapper}>
+                        <Text style={styles.name}>{name}</Text>
+                        <Text style={styles.text}>{company}, {country}</Text>
+                    </View>
                 </View>
-            </View>
-        </TouchableOpacity>
+            </TouchableOpacity>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: 'white',
+        backgroundColor: COLORS.white,
         borderRadius: 16,
-        shadowOpacity: 0.2,
+        shadowOpacity: 0.1,
         shadowRadius: 3,
         shadowColor: 'black',
         shadowOffset: {
@@ -35,12 +36,11 @@ const styles = StyleSheet.create({
             width: 0,
         },
         elevation: 1,
-        marginTop: 15,
-        margin: 10,
+        margin: 15,
         width: Dimensions.get('screen').width * 0.8,
     },
     image: {
-        height: '90%',
+        height: '80%',
         borderTopLeftRadius: 16,
         borderTopRightRadius: 16,
         width: '100%',
